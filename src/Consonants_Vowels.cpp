@@ -18,9 +18,41 @@ NOTES: Don't create new string , Dont return anything ,you have been given two p
 */
 
 #include <stddef.h>
+#include<stdio.h>
+#include<malloc.h>
+void count_vowels_and_consonants(char *str,int *consonants, int *vowels)
+{
+    int i=0,len;*consonants=0;*vowels=0;
+    if(str==NULL)
+    {
+        *consonants=0;
+        *vowels=0;
+    }
+    else{
+    for(len=0;str[len]!='\0';len++)
+    {
 
-
-void count_vowels_and_consonants(char *str,int *consonants, int *vowels){
-
-
+    }
+ //   printf("%d is len",len);
+    while(i<len)
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+            *vowels=*vowels+1;
+        else if(((int)str[i]>65&&(int)str[i]<69)||((int)str[i]>69&&(int)str[i]<73)||((int)str[i]>73&&(int)str[i]<79)||((int)str[i]>79&&(int)str[i]<85)||((int)str[i]>85&&(int)str[i]<91)||((int)str[i]>97&&(int)str[i]<101)||((int)str[i]>101&&(int)str[i]<105)||((int)str[i]>105&&(int)str[i]<111)||((int)str[i]>111&&(int)str[i]<117)||((int)str[i]>117&&(int)str[i]<123))
+            *consonants=*consonants+1;
+        i++;
+    }
+    }
 }
+/*int main()
+{
+    int vowels=0;int consonants=0;
+    char *str;
+    str=(char*) malloc(100);
+    scanf("%s",str);
+    printf("hai");
+    count_vowels_and_consonants(str,&consonants, &vowels);
+    printf("%d is no of vowels\n%d is no of consonants",vowels,consonants);
+return 0;
+}
+*/
