@@ -23,7 +23,7 @@ namespace spec
 					Assert::AreEqual(new_str[k], ans[si][k], L"Error in NormalString", LINE_INFO());
 				}
 			}
-			
+
 		}
 	};
 }
